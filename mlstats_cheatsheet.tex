@@ -428,7 +428,68 @@ Compiled by Daniel Fernandez (used template from http://wzchen.com and Joe Blitz
 
 \section{Neural Networks}
 
+Neural nets derived as models of the human brain, in which each unit represents a neuron, and the connections
+represents synapses.  The simplest model is called a Preceptron, and it consists on a single layer neural net with
+a series of inputs, one output, and a heavyside step activator function.
 
+\begin{minipage}{\linewidth}
+    \centering
+    \includegraphics[width=2in]{figures/nnbio.png}
+\end{minipage}
+
+
+\begin{description}
+
+\item[Definition] A neural network is a graph $(N,E,w)$ with a set of \textbf{neurons} (nodes/vertex) $N$,
+a set of \textbf{edges/connections} $E={(i,j)|i,j\in\mathbb{N}}$,
+a set of \textbf{functions} $w:N\rightarrow\mathbb{R}$ that defines the weights of the connection
+from node $i$ to node $j$, $w(i,j)$.
+Neural nets are extremely flexible and one has many choices available, mainly \\
+(1) the network structure/topology, for example,
+\textbf{feedforward networks} such that the neurons are grouped in the following layers:
+One input layer, n hidden processing layers (invisible from the outside, that’s why the neurons
+are also referred to as hidden neurons) and one output layer
+
+\begin{minipage}{\linewidth}
+    \centering
+    \includegraphics[width=2in]{figures/nntopology.png}
+\end{minipage}
+
+(2) the number of nodes and number of layers (complexity of the network), \\
+(3) the propagation function, typically the weighted sum of neurons, \\
+
+\begin{minipage}{\linewidth}
+    \centering
+    \includegraphics[width=2in]{figures/nnfunctions.png}
+\end{minipage}
+
+(4) and the activation/transfer function: step/heaviside, sigmoid/logistic,
+fermi with temperature parameter (smaller temperature close to heavyside)
+and the hyperbolic tangent.
+
+\begin{minipage}{\linewidth}
+    \centering
+    \includegraphics[width=2in]{figures/nnactivationfn.png}
+\end{minipage}
+
+\item[Preceptron] The simplest neural net is the so-called preceptron: it consists of a
+set of inputs, a process neuron, and a single output - the activator is the step function.
+This simplest preceptron can output the AND, OR and NOT binary operations of two inputs,
+but not a XOR (not linearly separable).
+
+\begin{minipage}{\linewidth}
+    \centering
+    \includegraphics[width=2in]{figures/preceptron.png}
+\end{minipage}
+
+\begin{minipage}{\linewidth}
+    \centering
+    \includegraphics[width=2in]{figures/xornn.png}
+\end{minipage}
+
+\item[Backpropagation] A more general network is the
+
+\end{description}
 
 \end{multicols*}
 
